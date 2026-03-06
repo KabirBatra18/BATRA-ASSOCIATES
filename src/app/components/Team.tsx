@@ -14,6 +14,11 @@ export default function Team() {
     visible: { opacity: 1, y: 0, transition: { type: "spring" as const, damping: 25, stiffness: 120 } },
   };
 
+  const stagger = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.15 } },
+  };
+
   const cardVariant = {
     hidden: { opacity: 0, y: 30, scale: 0.96 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring" as const, damping: 22, stiffness: 100 } },
@@ -37,14 +42,17 @@ export default function Team() {
           A team of qualified engineers dedicated to precision and integrity.
         </motion.p>
 
-        <div className="flex flex-col md:flex-row gap-8 max-w-3xl mx-auto items-start justify-center">
-          {/* Nanu Batra - Principal Valuer (larger card) */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto"
+          variants={stagger}
+          {...inView}
+        >
+          {/* Nanu Batra - Principal Valuer */}
           <motion.div
-            className="bg-white rounded-xl p-10 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center md:w-[58%]"
+            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center"
             variants={cardVariant}
-            {...inView}
           >
-            <div className="w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/10">
+            <div className="w-40 h-40 mx-auto mb-5 rounded-full overflow-hidden border-4 border-primary/20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`/images/team-nanu.png?t=${Date.now()}`}
@@ -52,13 +60,12 @@ export default function Team() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-bold text-dark">Er. Nanu Batra</h3>
+            <h3 className="text-lg font-bold text-dark">Er. Nanu Batra</h3>
             <p className="text-primary font-semibold text-sm mt-1">Principal Valuer</p>
-            <ul className="mt-5 space-y-2 text-left inline-block">
+            <ul className="mt-4 space-y-1.5 text-left inline-block">
               {[
                 "M.Tech, IIT Delhi",
                 "Govt & IBBI Approved Valuer",
-                "50+ Years of Experience",
                 "Empanelled with SBI, PNB, UCO Bank",
               ].map((cred) => (
                 <li key={cred} className="text-muted text-sm flex items-center gap-2">
@@ -71,11 +78,10 @@ export default function Team() {
             </ul>
           </motion.div>
 
-          {/* Kabir Batra - Engineer (smaller card) */}
+          {/* Kabir Batra - Engineer */}
           <motion.div
-            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center md:w-[42%]"
+            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center"
             variants={cardVariant}
-            {...inView}
           >
             <div className="w-36 h-36 mx-auto mb-5 rounded-full overflow-hidden border-4 border-primary/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -102,7 +108,7 @@ export default function Team() {
               ))}
             </ul>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
