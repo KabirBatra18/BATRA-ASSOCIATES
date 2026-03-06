@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3459/valuation/income-tax)",
+      "Bash(npx next dev -p 3459)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3459)",
+      "Bash(find \"/Users/kabir/Desktop/b&a new\" -maxdepth 2 -type f -name \"*.tsx\" -o -name \"*.ts\")",
+      "Bash(find \"/Users/kabir/Desktop/b&a new/src/app/components/\" -type f -name \"*.tsx\" -o -name \"*.ts\")",
+      "Bash(find \"/Users/kabir/Desktop/b&a new/public\" -type f)",
+      "Bash(find \"/Users/kabir/Desktop/b&a new/src/app/components\" -name \"*.tsx\")",
+      "Bash(find \"/Users/kabir/Desktop/b&a new\" -maxdepth 1 -name \".eslintrc*\" -o -name \"eslint.config.*\" -o -name \"postcss.config.*\" -o -name \"tailwind.config.*\")",
+      "Bash(find \"/Users/kabir/Desktop/b&a new\" -name \"*.config.*\" -o -name \"vercel.json\" -o -name \".env*\")",
+      "Bash(find \"/Users/kabir/Desktop/b&a new\" -maxdepth 1 -name \".env*\" -o -name \"*.local\")",
+      "Bash(wc -l \"/Users/kabir/Desktop/b&a new/src/app/components/Header.tsx\" \"/Users/kabir/Desktop/b&a new/src/app/components/Contact.tsx\" \"/Users/kabir/Desktop/b&a new/src/app/components/Services.tsx\")"
+    ]
+  }
+}
