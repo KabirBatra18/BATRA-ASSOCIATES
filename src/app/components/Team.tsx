@@ -14,11 +14,6 @@ export default function Team() {
     visible: { opacity: 1, y: 0, transition: { type: "spring" as const, damping: 25, stiffness: 120 } },
   };
 
-  const stagger = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.15 } },
-  };
-
   const cardVariant = {
     hidden: { opacity: 0, y: 30, scale: 0.96 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring" as const, damping: 22, stiffness: 100 } },
@@ -42,17 +37,14 @@ export default function Team() {
           A team of qualified engineers dedicated to precision and integrity.
         </motion.p>
 
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto"
-          variants={stagger}
-          {...inView}
-        >
-          {/* Nanu Batra - Principal Valuer */}
+        <div className="max-w-3xl mx-auto space-y-8">
+          {/* Nanu Batra - Principal Valuer — wide horizontal card */}
           <motion.div
-            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center"
+            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] flex flex-col sm:flex-row items-center sm:items-start gap-8"
             variants={cardVariant}
+            {...inView}
           >
-            <div className="w-40 h-40 mx-auto mb-5 rounded-full overflow-hidden border-4 border-primary/20">
+            <div className="w-40 h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-primary/20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`/images/team-nanu.png?t=${Date.now()}`}
@@ -60,30 +52,33 @@ export default function Team() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-lg font-bold text-dark">Er. Nanu Batra</h3>
-            <p className="text-primary font-semibold text-sm mt-1">Principal Valuer</p>
-            <ul className="mt-4 space-y-1.5 text-left inline-block">
-              {[
-                "M.Tech, IIT Delhi",
-                "Govt & IBBI Approved Valuer",
-                "Empanelled with SBI, PNB, UCO Bank",
-              ].map((cred) => (
-                <li key={cred} className="text-muted text-sm flex items-center gap-2">
-                  <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  {cred}
-                </li>
-              ))}
-            </ul>
+            <div className="text-center sm:text-left">
+              <h3 className="text-xl font-bold text-dark">Er. Nanu Batra</h3>
+              <p className="text-primary font-semibold text-sm mt-1">Principal Valuer</p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  "M.Tech, IIT Delhi",
+                  "Govt & IBBI Approved Valuer",
+                  "Empanelled with SBI, PNB, UCO Bank",
+                ].map((cred) => (
+                  <li key={cred} className="text-muted text-sm flex items-center gap-2">
+                    <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    {cred}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
 
-          {/* Kabir Batra - Engineer */}
+          {/* Kabir Batra - Engineer — compact card centered below */}
           <motion.div
-            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center"
+            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] flex flex-col sm:flex-row items-center sm:items-start gap-8 max-w-lg mx-auto"
             variants={cardVariant}
+            {...inView}
           >
-            <div className="w-36 h-36 mx-auto mb-5 rounded-full overflow-hidden border-4 border-primary/10">
+            <div className="w-36 h-36 flex-shrink-0 rounded-full overflow-hidden border-4 border-primary/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`/images/team-kabir.png?t=${Date.now()}`}
@@ -91,24 +86,26 @@ export default function Team() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-lg font-bold text-dark">Er. Kabir Batra</h3>
-            <p className="text-primary font-semibold text-sm mt-1">Engineer</p>
-            <ul className="mt-4 space-y-1.5 text-left inline-block">
-              {[
-                "B.Tech, NSUT Delhi",
-                "On-Site Inspections & Analysis",
-                "Valuation Documentation",
-              ].map((cred) => (
-                <li key={cred} className="text-muted text-sm flex items-center gap-2">
-                  <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  {cred}
-                </li>
-              ))}
-            </ul>
+            <div className="text-center sm:text-left">
+              <h3 className="text-xl font-bold text-dark">Er. Kabir Batra</h3>
+              <p className="text-primary font-semibold text-sm mt-1">Engineer</p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  "B.Tech, NSUT Delhi",
+                  "On-Site Inspections & Analysis",
+                  "Valuation Documentation",
+                ].map((cred) => (
+                  <li key={cred} className="text-muted text-sm flex items-center gap-2">
+                    <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    {cred}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
