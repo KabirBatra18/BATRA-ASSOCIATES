@@ -2,30 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 
-const team = [
-  {
-    name: "Er. Nanu Batra",
-    role: "Founder & Principal Valuer",
-    photo: "/images/team-nanu.png",
-    credentials: [
-      "M.Tech, IIT Delhi",
-      "Govt & IBBI Approved Valuer",
-      "20+ Years of Experience",
-      "Empanelled with SBI, PNB, UCO Bank",
-    ],
-  },
-  {
-    name: "Er. Kabir Batra",
-    role: "Engineer",
-    photo: "/images/team-kabir.png",
-    credentials: [
-      "B.Tech, NSUT Delhi",
-      "On-Site Inspections & Analysis",
-      "Valuation Documentation",
-    ],
-  },
-];
-
 export default function Team() {
   const prefersReducedMotion = useReducedMotion();
 
@@ -36,11 +12,6 @@ export default function Team() {
   const fadeUp = {
     hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0, transition: { type: "spring" as const, damping: 25, stiffness: 120 } },
-  };
-
-  const stagger = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.15 } },
   };
 
   const cardVariant = {
@@ -66,40 +37,72 @@ export default function Team() {
           A team of qualified engineers dedicated to precision and integrity.
         </motion.p>
 
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto"
-          variants={stagger}
-          {...inView}
-        >
-          {team.map((member) => (
-            <motion.div
-              key={member.name}
-              className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center"
-              variants={cardVariant}
-            >
-              <div className="w-36 h-36 mx-auto mb-5 rounded-full overflow-hidden border-4 border-primary/10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${member.photo}?t=${Date.now()}`}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-lg font-bold text-dark">{member.name}</h3>
-              <p className="text-primary font-semibold text-sm mt-1">{member.role}</p>
-              <ul className="mt-4 space-y-1.5 text-left inline-block">
-                {member.credentials.map((cred) => (
-                  <li key={cred} className="text-muted text-sm flex items-center gap-2">
-                    <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    {cred}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="flex flex-col md:flex-row gap-8 max-w-3xl mx-auto items-start justify-center">
+          {/* Nanu Batra - Principal Valuer (larger card) */}
+          <motion.div
+            className="bg-white rounded-xl p-10 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center md:w-[58%]"
+            variants={cardVariant}
+            {...inView}
+          >
+            <div className="w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/images/team-nanu.png?t=${Date.now()}`}
+                alt="Er. Nanu Batra"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-dark">Er. Nanu Batra</h3>
+            <p className="text-primary font-semibold text-sm mt-1">Principal Valuer</p>
+            <ul className="mt-5 space-y-2 text-left inline-block">
+              {[
+                "M.Tech, IIT Delhi",
+                "Govt & IBBI Approved Valuer",
+                "50+ Years of Experience",
+                "Empanelled with SBI, PNB, UCO Bank",
+              ].map((cred) => (
+                <li key={cred} className="text-muted text-sm flex items-center gap-2">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {cred}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Kabir Batra - Engineer (smaller card) */}
+          <motion.div
+            className="bg-white rounded-xl p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.05)] text-center md:w-[42%]"
+            variants={cardVariant}
+            {...inView}
+          >
+            <div className="w-36 h-36 mx-auto mb-5 rounded-full overflow-hidden border-4 border-primary/10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/images/team-kabir.png?t=${Date.now()}`}
+                alt="Er. Kabir Batra"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-lg font-bold text-dark">Er. Kabir Batra</h3>
+            <p className="text-primary font-semibold text-sm mt-1">Engineer</p>
+            <ul className="mt-4 space-y-1.5 text-left inline-block">
+              {[
+                "B.Tech, NSUT Delhi",
+                "On-Site Inspections & Analysis",
+                "Valuation Documentation",
+              ].map((cred) => (
+                <li key={cred} className="text-muted text-sm flex items-center gap-2">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {cred}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

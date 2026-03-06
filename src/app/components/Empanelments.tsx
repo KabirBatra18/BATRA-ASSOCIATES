@@ -46,7 +46,7 @@ export default function Empanelments() {
                   MCD Delhi — Engineer &amp; Structural Engineer
                 </p>
                 <p className="text-muted text-xs mt-1">
-                  Registration: E-1803, SE-74 (Since 1997)
+                  Registration: E-1803, SE-74 (Since 1975)
                 </p>
               </li>
               <li className="border-b border-gray-100 pb-3">

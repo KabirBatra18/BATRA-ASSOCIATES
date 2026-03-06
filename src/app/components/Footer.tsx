@@ -26,7 +26,7 @@ export default function Footer({ isSubPage = false }: FooterProps) {
               height={40}
               className="h-10 w-auto mb-4"
             />
-            <p className="text-white/50 text-xs mb-2">Established 1997 | Govt &amp; IBBI Approved</p>
+            <p className="text-white/50 text-xs mb-2">Established 1975 | Govt &amp; IBBI Approved</p>
             <p className="text-white/80 text-sm leading-relaxed">
               Government and IBBI approved property valuers and structural
               engineers based in New Delhi. Trusted by leading banks and

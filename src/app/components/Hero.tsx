@@ -47,9 +47,9 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold mb-5"
               variants={fadeUp}
             >
-              <span>Est. 1997</span>
+              <span>Est. 1975</span>
               <span className="w-1 h-1 bg-primary rounded-full" />
-              <span>20+ Years of Trust</span>
+              <span>50+ Years of Trust</span>
             </motion.div>
             <motion.h1
               className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-bold leading-tight tracking-tight text-dark"
@@ -144,9 +144,9 @@ function HeroStatic() {
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <div className="lg:w-1/2 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold mb-5">
-              <span>Est. 1997</span>
+              <span>Est. 1975</span>
               <span className="w-1 h-1 bg-primary rounded-full" />
-              <span>20+ Years of Trust</span>
+              <span>50+ Years of Trust</span>
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-bold leading-tight tracking-tight text-dark">
               Delhi&apos;s Trusted{" "}

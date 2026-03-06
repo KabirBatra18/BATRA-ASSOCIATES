@@ -1,5 +1,5 @@
 export const SITE_URL = "https://batraassociate.com";
-export const ESTABLISHED_YEAR = 1997;
+export const ESTABLISHED_YEAR = 1975;
 export const PHONE = "+919811741187";
 export const PHONE_DISPLAY = "9811741187";
 export const PHONE_FORMATTED = "+91 9811741187";

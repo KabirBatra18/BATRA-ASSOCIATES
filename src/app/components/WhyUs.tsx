@@ -10,7 +10,7 @@ const reasons = [
       </svg>
     ),
     title: "Government Approved",
-    description: "Registered with Income Tax Dept (since 2014), IBBI, and MCD Delhi (since 1997).",
+    description: "Registered with Income Tax Dept (since 2014), IBBI, and MCD Delhi (since 1975).",
   },
   {
     icon: (
@@ -29,8 +29,8 @@ const reasons = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    title: "20+ Years Experience",
-    description: "Led by Er. Nanu Batra, M.Tech IIT Delhi, with two decades of industry expertise.",
+    title: "50+ Years Experience",
+    description: "Led by Er. Nanu Batra, M.Tech IIT Delhi, with five decades of industry expertise.",
   },
   {
     icon: (

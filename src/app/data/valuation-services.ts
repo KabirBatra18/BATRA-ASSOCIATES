@@ -403,7 +403,7 @@ export const valuationServices: ValuationService[] = [
       },
     ],
     whyUsIntro:
-      "Registered with MCD Delhi since 1997, we have deep knowledge of Delhi's property market and circle rates across all zones.",
+      "Registered with MCD Delhi since 1975, we have deep knowledge of Delhi's property market and circle rates across all zones.",
     schemaServiceType: "Property Valuation for Stamp Duty",
   },
   {

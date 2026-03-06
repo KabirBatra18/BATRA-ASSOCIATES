@@ -11,7 +11,7 @@ interface ServiceHeroProps {
 const trustBadges = [
   "Govt Approved Valuer",
   "IBBI Registered",
-  "20+ Years Experience",
+  "50+ Years Experience",
   "SBI / PNB Empanelled",
 ];
 

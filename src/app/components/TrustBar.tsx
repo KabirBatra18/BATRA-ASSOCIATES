@@ -18,7 +18,7 @@ const indicators = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    label: "Est. 1997",
+    label: "Est. 1975",
   },
   {
     icon: (

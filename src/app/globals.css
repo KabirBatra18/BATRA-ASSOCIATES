@@ -90,7 +90,7 @@ body {
 /* Fixed contact buttons */
 .fixed-btn {
   position: fixed;
-  right: -135px;
+  right: -100px;
   z-index: 40;
   display: flex;
   align-items: center;

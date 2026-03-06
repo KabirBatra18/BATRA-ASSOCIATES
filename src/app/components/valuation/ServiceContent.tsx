@@ -17,7 +17,7 @@ const credentialCards = [
       </svg>
     ),
     title: "Govt Approved",
-    desc: "Registered with Income Tax Dept & MCD Delhi since 1997",
+    desc: "Registered with Income Tax Dept & MCD Delhi since 1975",
   },
   {
     icon: (
@@ -47,7 +47,7 @@ const credentialCards = [
         <path d="M6 20v-4" />
       </svg>
     ),
-    title: "20+ Years",
+    title: "50+ Years",
     desc: "Led by Er. Nanu Batra, M.Tech IIT Delhi",
   },
 ];
